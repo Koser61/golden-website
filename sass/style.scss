@@ -9,3 +9,60 @@ $color-main: #fed136;
 $color-dark: #222222;
 $color-bright: #777777;
 $color-bg: #f7f7f7;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* Header */
+
+header {
+    height: 120px;
+    background-color: black; //temp background
+}
+
+header .container {
+    height: inherit;
+}
+
+.navigation {
+    height: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.nav-logo span {
+    font-family: $font-logo;
+    font-size: 36px;
+    color: $color-main;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+}
