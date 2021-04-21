@@ -21,10 +21,29 @@ $transition: all 0.5s;
 body {
     margin: 0;
     padding: 0;
+    font-family: $font-text;
+    font-size: 16px;
+    color: $color-bright;
 }
 
 a {
     cursor: pointer;
+}
+
+.section-title {
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 36px;
+    color: $color-dark;
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 0px;
+}
+
+.section-subtitle {
+    font-family: $font-subtitle;
+    text-align: center;
+    margin: 8px 0;
 }
 
 /* Header */
