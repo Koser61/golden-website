@@ -25,11 +25,41 @@ a {
     cursor: pointer;
 }
 
+/* Splash */
+
+.splash {
+    position: relative;
+    height: 100vh;
+}
+
+.splash::before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/splash-bg-image.png);
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.6);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.splash-inner {
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Header */
 
 header {
     height: 120px;
-    background-color: black; //temp background
+    //background-color: black; //temp background
 }
 
 header .container {
