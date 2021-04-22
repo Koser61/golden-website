@@ -9,6 +9,7 @@ $color-main: #fed136;
 $color-dark: #222222;
 $color-bright: #777777;
 $color-bg: #f7f7f7;
+$color-grey: #333333;
 
 $transition: all 0.5s;
 
@@ -192,7 +193,7 @@ header .container {
 
 /* Responsive */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .splash-subtitle {
         font-size: 24px;
         margin: 8px 0;
@@ -205,7 +206,7 @@ header .container {
         font-size: 14px;
     }
     .splash-inner {
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -35%);
     }
     .sect {
         padding: 36px 26px 48px 26px;
