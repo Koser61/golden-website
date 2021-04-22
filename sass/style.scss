@@ -22,12 +22,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-text;
-    font-size: 16px;
+    font-size: 14px;
     color: $color-bright;
 }
 
 a {
     cursor: pointer;
+}
+
+.sect {
+    padding: 60px 26px 72px 26px;
 }
 
 .section-title {
@@ -36,14 +40,22 @@ a {
     font-size: 36px;
     color: $color-dark;
     text-align: center;
-    margin-top: 72px;
     margin-bottom: 0px;
 }
 
-.section-subtitle {
+.subtitle {
     font-family: $font-subtitle;
     text-align: center;
-    margin: 8px 0;
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.card-title {
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 18px;
+    color: $color-dark;
+    margin: 24px 0;
 }
 
 /* Header */
@@ -149,6 +161,33 @@ header .container {
 .splash-btn:hover {
     transform: scale(1.1);
     transition: $transition;
+}
+
+/* Services */
+
+.services .row {
+    margin-top: 60px;
+}
+
+.card {
+    text-align: center;
+}
+
+.services-icon {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    border: 2px solid $color-main;
+    border-radius: 50%;
+    text-align: center;
+    cursor: initial;
+}
+
+.services-icon i {
+    font-size: 37px;
+    color: $color-main;
+    vertical-align: sub;
 }
 
 /* Responsive */
