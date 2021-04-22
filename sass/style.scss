@@ -192,26 +192,7 @@ header .container {
 
 /* Responsive */
 
-@media only screen and (max-width: 425px) {
-    .nav-links a {
-        margin-left: 8px;
-        margin-bottom: 6px;
-    }
-}
 @media only screen and (max-width: 767px) {
-    .splash-subtitle {
-        font-size: 26px;
-        margin: 14px 0;
-    }
-    .splash-title {
-        font-size: 48px;
-        margin: 24px 0;
-    }
-    .splash-btn {
-        font-size: 16px;
-    }
-}
-@media only screen and (max-width: 586px) {
     .splash-subtitle {
         font-size: 24px;
         margin: 8px 0;
@@ -225,5 +206,23 @@ header .container {
     }
     .splash-inner {
         transform: translate(-50%, -40%);
+    }
+    .sect {
+        padding: 36px 26px 48px 26px;
+    }
+    .services .row {
+        margin-top: 36px;
+    }
+    .card {
+        margin-top: 24px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .nav-links a {
+        margin-left: 8px;
+        margin-bottom: 6px;
+    }
+    .splash-inner {
+        transform: translate(-50%, -35%);
     }
 }
