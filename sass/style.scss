@@ -8,6 +8,7 @@ $font-text: 'Roboto Slab', serif;
 $color-main: #fed136;
 $color-dark: #222222;
 $color-grey: #333333;
+$color-footer: #555555;
 $color-bright: #777777;
 $color-bg: #f7f7f7;
 
@@ -226,6 +227,51 @@ header .container {
     margin: 0;
 }
 
+/* Footer */
+
+footer {
+    height: 120px;
+}
+
+footer .container, footer .row {
+    height: 100%;
+}
+
+.author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color-footer;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid $color-dark;
+    border-radius: 50%;
+    background-color: $color-dark;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    transition: $transition;
+}
+
+.social-icon i {
+    font-size: 20px;
+    color: white;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 768px) {
@@ -251,6 +297,21 @@ header .container {
     }
     .card {
         margin-top: 24px;
+    }
+    .author {
+        justify-content: center;
+    }
+    .col-hide {
+        display: none;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .author {
+        order: 2;
+    }
+    .socials {
+        order: 1;
+        margin-top: 20px;
     }
 }
 @media only screen and (max-width: 425px) {
