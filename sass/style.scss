@@ -1,25 +1,20 @@
 /* Variables */
-
 $font-logo: 'Yesteryear', cursive;
 $font-title: 'Montserrat', sans-serif;
 $font-subtitle: 'Noto Serif', serif;
 $font-text: 'Roboto Slab', serif;
-
 $color-main: #fed136;
 $color-dark: #222222;
 $color-grey: #333333;
 $color-footer: #555555;
 $color-bright: #777777;
 $color-bg: #f7f7f7;
-
 $transition: all 0.5s;
 
 /* Global */
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -27,15 +22,12 @@ body {
     font-size: 14px;
     color: $color-bright;
 }
-
 a {
     cursor: pointer;
 }
-
 .sect {
     padding: 60px 26px 72px 26px;
 }
-
 .section-title {
     font-family: $font-title;
     font-weight: 700;
@@ -44,14 +36,12 @@ a {
     text-align: center;
     margin-bottom: 0px;
 }
-
 .subtitle {
     font-family: $font-subtitle;
     text-align: center;
     font-size: 16px;
     margin: 12px 0;
 }
-
 .card-title {
     font-family: $font-title;
     font-weight: 700;
@@ -61,38 +51,31 @@ a {
 }
 
 /* Header */
-
 header {
     height: 120px;
 }
-
 header .container {
     height: inherit;
 }
-
 .navigation {
     height: inherit;
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-logo {
     display: inline-flex;
     justify-content: center;
 }
-
 .nav-logo span {
     font-family: $font-logo;
     font-size: 36px;
     color: $color-main;
 }
-
 .nav-links {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-
 .nav-links a {
     text-decoration: none;
     font-family: $font-title;
@@ -101,13 +84,11 @@ header .container {
     color: white;
     letter-spacing: 1px;
 }
-
 .nav-links a:hover {
     color: $color-main;
 }
 
 /* Splash */
-
 .splash {
     position: relative;
     height: 100vh;
@@ -115,7 +96,6 @@ header .container {
     background-position: center center;
     background-size: cover;
 }
-
 .splash-inner {
     position: absolute;
     text-align: center;
@@ -125,20 +105,17 @@ header .container {
     transform: translate(-50%, -50%);
     width: fit-content;
 }
-
 .splash-subtitle {
     margin: 16px 0;
     font-family: $font-subtitle;
     font-size: 32px;
 }
-
 .splash-title {
     margin: 32px 0;
     font-family: $font-title;
     font-weight: 700;
     font-size: 60px;
 }
-
 .splash-btn {
     display: inline-block;
     font-family: $font-title;
@@ -149,22 +126,18 @@ header .container {
     background-color: $color-main;
     padding: 12px 24px;
 }
-
 .splash-btn:hover {
     transform: scale(1.1);
     transition: $transition;
 }
 
 /* Services */
-
 .services .row {
     margin-top: 60px;
 }
-
 .card {
     text-align: center;
 }
-
 .services-icon {
     display: inline-block;
     width: 75px;
@@ -175,7 +148,6 @@ header .container {
     text-align: center;
     cursor: initial;
 }
-
 .services-icon i {
     font-size: 37px;
     color: $color-main;
@@ -183,16 +155,13 @@ header .container {
 }
 
 /* Portfolio */
-
 .portfolio {
     background-color: $color-bg;
 }
-
 .portfolio .row {
     margin-top: 60px;
     margin-bottom: 0;
 }
-
 .portfolio-box {
     background-color: white;
     width: 100%;
@@ -200,56 +169,51 @@ header .container {
     margin: 0;
     margin-bottom: 36px;
 }
-
 .img-box {
     width: auto;
     height: auto;
 }
-
+.img-box:hover {
+    transform: scale(1.05);
+    transition: $transition;
+    border: 2px solid $color-main;
+}
 .img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .description {
     text-align: center;
     padding: 18px 0;
 }
-
 .description .card-title {
     color: $color-grey;
     margin: 0;
 }
-
 .description p {
     font-family: $font-subtitle;
     margin: 0;
 }
 
 /* Footer */
-
 footer {
     height: 120px;
 }
-
 footer .container, footer .row {
     height: 100%;
 }
-
 .author {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: $color-footer;
 }
-
 .socials {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .social-icon {
     display: inline-block;
     width: 40px;
@@ -261,19 +225,16 @@ footer .container, footer .row {
     text-align: center;
     margin: 0 10px;
 }
-
 .social-icon:hover {
     transform: scale(1.1);
     transition: $transition;
 }
-
 .social-icon i {
     font-size: 20px;
     color: white;
 }
 
 /* Responsive */
-
 @media only screen and (max-width: 768px) {
     .splash-subtitle {
         font-size: 24px;
@@ -305,6 +266,7 @@ footer .container, footer .row {
         display: none;
     }
 }
+
 @media only screen and (max-width: 576px) {
     .author {
         order: 2;
@@ -314,6 +276,7 @@ footer .container, footer .row {
         margin-top: 20px;
     }
 }
+
 @media only screen and (max-width: 425px) {
     .nav-links a {
         margin-left: 8px;
