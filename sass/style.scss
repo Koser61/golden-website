@@ -22,15 +22,11 @@ body {
     font-size: 14px;
     color: $color-bright;
 }
-a {
-    cursor: pointer;
-}
-.sect {
+section {
     padding: 60px 26px 72px 26px;
 }
 .section-title {
     font-family: $font-title;
-    font-weight: 700;
     font-size: 36px;
     color: $color-dark;
     text-align: center;
@@ -53,9 +49,9 @@ a {
 /* Header */
 header {
     height: 120px;
-}
-header .container {
-    height: inherit;
+    .container {
+        height: inherit;
+    }
 }
 .navigation {
     height: inherit;
@@ -65,31 +61,32 @@ header .container {
 .nav-logo {
     display: inline-flex;
     justify-content: center;
-}
-.nav-logo span {
-    font-family: $font-logo;
-    font-size: 36px;
-    color: $color-main;
+    span {
+        font-family: $font-logo;
+        font-size: 36px;
+        color: $color-main;
+    }
 }
 .nav-links {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-.nav-links a {
-    text-decoration: none;
-    font-family: $font-title;
-    font-weight: 400;
-    font-size: 14px;
-    color: white;
-    letter-spacing: 1px;
-}
-.nav-links a:hover {
-    color: $color-main;
+    a {
+        text-decoration: none;
+        font-family: $font-title;
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        letter-spacing: 1px;
+    }
+    a:hover {
+        color: $color-main;
+    }
 }
 
 /* Splash */
 .splash {
+    padding: 0;
     position: relative;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/splash-bg-image.png);
@@ -121,10 +118,10 @@ header .container {
     font-family: $font-title;
     font-weight: 700;
     font-size: 18px;
-    border: 1px solid $color-main;
     border-radius: 6px;
     background-color: $color-main;
     padding: 12px 24px;
+    cursor: pointer;
 }
 .splash-btn:hover {
     transform: scale(1.1);
@@ -147,61 +144,59 @@ header .container {
     border-radius: 50%;
     text-align: center;
     cursor: initial;
-}
-.services-icon i {
-    font-size: 37px;
-    color: $color-main;
-    vertical-align: sub;
+    i {
+        font-size: 37px;
+        color: $color-main;
+        vertical-align: sub;
+    }
 }
 
 /* Portfolio */
 .portfolio {
     background-color: $color-bg;
-}
-.portfolio .row {
-    margin-top: 60px;
-    margin-bottom: 0;
+    .row {
+        margin-top: 60px;
+    }
 }
 .portfolio-box {
     background-color: white;
     width: 100%;
     height: auto;
-    margin: 0;
     margin-bottom: 36px;
 }
 .img-box {
     width: auto;
     height: auto;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .img-box:hover {
     transform: scale(1.05);
     transition: $transition;
     border: 2px solid $color-main;
 }
-.img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .description {
     text-align: center;
     padding: 18px 0;
-}
-.description .card-title {
-    color: $color-grey;
-    margin: 0;
-}
-.description p {
-    font-family: $font-subtitle;
-    margin: 0;
+    .card-title {
+        color: $color-grey;
+        margin: 0;
+    }
+    p {
+        font-family: $font-subtitle;
+        margin: 0;
+    }    
 }
 
 /* Footer */
 footer {
     height: 120px;
-}
-footer .container, footer .row {
-    height: 100%;
+    .container, .row {
+        height: 100%;
+    }
 }
 .author {
     display: flex;
@@ -224,24 +219,29 @@ footer .container, footer .row {
     background-color: $color-dark;
     text-align: center;
     margin: 0 10px;
+    i {
+        font-size: 20px;
+        color: white;
+    }    
 }
 .social-icon:hover {
     transform: scale(1.1);
     transition: $transition;
 }
-.social-icon i {
-    font-size: 20px;
-    color: white;
-}
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
+    .col-hide {
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
     .splash-subtitle {
-        font-size: 24px;
+        font-size: 26px;
         margin: 8px 0;
     }
     .splash-title {
-        font-size: 36px;
+        font-size: 48px;
         margin: 16px 0;
     }
     .splash-btn {
@@ -250,7 +250,7 @@ footer .container, footer .row {
     .splash-inner {
         transform: translate(-50%, -35%);
     }
-    .sect {
+    .section {
         padding: 36px 26px 48px 26px;
     }
     .services .row {
@@ -259,21 +259,25 @@ footer .container, footer .row {
     .card {
         margin-top: 24px;
     }
+}
+@media only screen and (max-width: 575px) {
+    .splash-subtitle {
+        font-size: 24px;
+        margin: 8px 0;
+    }
+    .splash-title {
+        font-size: 36px;
+        margin: 16px 0;
+    }
+    .socials {
+        margin-top: 20px;
+    }
     .author {
         justify-content: center;
-    }
-    .col-hide {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .author {
         order: 2;
     }
     .socials {
         order: 1;
-        margin-top: 20px;
     }
 }
 
@@ -281,8 +285,5 @@ footer .container, footer .row {
     .nav-links a {
         margin-left: 8px;
         margin-bottom: 6px;
-    }
-    .splash-inner {
-        transform: translate(-50%, -35%);
     }
 }
